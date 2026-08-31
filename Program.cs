@@ -1,9 +1,8 @@
-﻿string greeting = "hello" + " wonderful " + "world!";
+﻿string name = "Anna";
+int age = 20;
 
-// Console.Write(greeting[1] + "" +  greeting[2]);
+// print a greeting, that says users name and their age in one line
 
-// creating a char type
+Console.WriteLine("Hi, my name is " + name + " and i am " + age + " years old.");
 
-char menuOption = 'a';
-
-//Console.WriteLine(menuOption);
+Console.WriteLine($"Hi, my name is {name} and i am {age} years old.");
