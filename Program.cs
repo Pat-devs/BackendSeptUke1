@@ -1,7 +1,3 @@
 ﻿string greeting = "hello" + " wonderful " + "world!";
 
-// boolean (true/false)
-
-bool isItMonday = true;
-
-Console.WriteLine(isItMonday);
+Console.Write(greeting[1] + "" +  greeting[2]);
