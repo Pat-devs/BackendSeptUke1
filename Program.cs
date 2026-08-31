@@ -11,15 +11,19 @@ string greeting = "hello" + " wonderful " + "world!";
 // numerical types:
 
 // integer (whole numbers)
-int number1 = 2;
+int number1 = 5;
 int number2 = 2;
 
-int sumResult = number1 + number2;
+// + is sum
+// - is substract
+// * is multiplication
+// / is division
 
-// Console.WriteLine(sumResult);
+Console.WriteLine(number1 / number2);
 
-// Console.WriteLine(5 + 5 + "2");
+// one extra fancy operator
 
-// int sumIntsWithString = 5 + 5 + "2";
+// modulo, or remainder operator is the % sign
 
-// Console.WriteLine(sumIntsWithString);
+Console.WriteLine(number1 % number2);
+// explanation: 5 / 2 = 2... so 2 * 2 = 4 ... means there is 1 left over.
