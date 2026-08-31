@@ -27,3 +27,8 @@ Console.WriteLine(number1 / number2);
 
 Console.WriteLine(number1 % number2);
 // explanation: 5 / 2 = 2... so 2 * 2 = 4 ... means there is 1 left over.
+
+Console.WriteLine(2 % 2);
+Console.WriteLine(3 % 2);
+Console.WriteLine(4 % 2);
+Console.WriteLine(5 % 2);
