@@ -33,17 +33,12 @@ class Program
         {
             int passwordScore = 0; 
 
-            string? password = GetPasswordInput();
+            string? password =  Console.ReadLine();
             passwordScore = CalculatePasswordScore(password);
 
             Console.WriteLine($"password score: {passwordScore}");
         }
 
-    }
-    static string? GetPasswordInput()
-    {
-        // skriv koden her :)
-        return Console.ReadLine();
     }
 
     static bool IsLongEnough(string password)
