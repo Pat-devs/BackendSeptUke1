@@ -17,46 +17,89 @@ Programflyt, rett etter dotnet run:
 7. Foreslå forbedring til bruker hvis passord ikke sterkt nok.
 */
 
-string GetPasswordInput()
-{
-    // skriv koden her :)
-    return "";
-}
+namespace BackendSeptUke1;
 
-bool IsLongEnough(string password)
-{
-    // skriv koden her :)
-    return false;
-}
 
-// check what chars password contains methods:
-bool HasUppercase(string password)
+class Program
 {
-    // skriv koden her :)
-    return false;
-}
-bool HasLowercase(string password)
-{
-    // skriv koden her :)
-    return false;
-}
-bool HasDigit(string password)
-{
-    // skriv koden her :)
-    return false;
-}
-bool HasSpecialCharacter(string password)
-{
-    // skriv koden her :)
-    return false;
-}
+    static void Main(string[] args)
+    {
+        
 
-int CalculatePasswordScore(string password)
-{
-    return 0;
-}
+        Console.Clear();
+        Console.WriteLine("Welcome to the password strengh checking app. Please enter a password and hit enter key.");
+        
+        while (true)
+        {
+            int passwordScore = 0; 
 
-void GetMissingRequirements(string password)
-{
-    // code to check requirments, and then display to user.
+            string? password = GetPasswordInput();
+            passwordScore = CalculatePasswordScore(password);
+
+            Console.WriteLine($"password score: {passwordScore}");
+        }
+
+    }
+    static string? GetPasswordInput()
+    {
+        // skriv koden her :)
+        return Console.ReadLine();
+    }
+
+    static bool IsLongEnough(string password)
+    {
+        if (password.Length >= 8) return true;
+        return false;
+    }
+
+    // check what chars password contains methods:
+    static bool HasUppercase(string password)
+    {
+        foreach (char character in password)
+        {
+            if (char.IsUpper(character)) return true;
+        }
+        return false;
+    }
+    static bool HasLowercase(string password)
+    {
+        foreach (char character in password)
+        {
+            if (char.IsLower(character)) return true;
+        }
+        return false;
+    }
+    static bool HasDigit(string password)
+    {
+        foreach (char character in password)
+        {
+            if (char.IsDigit(character)) return true;
+        }
+        return false;
+    }
+    static bool HasSpecialCharacter(string password)
+    {
+        foreach (char character in password)
+        {
+            if (char.IsSymbol(character) || char.IsPunctuation(character)) return true;
+        }
+        return false;
+    }
+
+    static int CalculatePasswordScore(string password)
+    {
+        int scoreCalculation = 0;
+        if (IsLongEnough(password)) scoreCalculation++;
+        if (HasLowercase(password)) scoreCalculation++;
+        if (HasUppercase(password)) scoreCalculation++;
+        if (HasDigit(password)) scoreCalculation++;
+        if (HasSpecialCharacter(password)) scoreCalculation++;
+
+        return scoreCalculation;
+    }
+
+    static void ShowMissingRequirements(string password)
+    {
+        // code to check requirments, and then display to user.
+    }
 }
