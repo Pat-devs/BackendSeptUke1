@@ -1,20 +1,62 @@
-﻿// basic greeter program
-// ask user for their name and then print their name
-// and then ask the user for their age
+﻿/*
+Oppgave, uke 1
 
-// inform the user what the program expects
-Console.WriteLine("Please enter your name, and then hit enter: ");
+Lag et rent CLI-program i C# som sjekker hvor sterkt et passord er.
 
-string userName = Console.ReadLine();
+Programmet skal sjekke passordet steg for steg og holde hver oppgave i en egen metode, slik at koden blir enkel å lese, teste og bygge videre på.
+*/
 
-Console.WriteLine($"Users name is {userName}");
+/*
+Programflyt, rett etter dotnet run:
+1. Hils på bruker
+2. Vent på input X
+3. Sjekk input, sjekk lengde på passord (hvis langt nok return true, ellers return false)
+4. Sjekk hva det innholder, uppercase, lowercase, digit, osv... (flere funksjoner som return boolean)
+5. Sjekk hvor sterkt det er (score, integer 0-x)
+6. Vis hva mangler ?
+7. Foreslå forbedring til bruker hvis passord ikke sterkt nok.
+*/
 
-string userAge = Console.ReadLine();
+string GetPasswordInput()
+{
+    // skriv koden her :)
+    return "";
+}
 
-Console.WriteLine($"Users age is {userAge}");
+bool IsLongEnough(string password)
+{
+    // skriv koden her :)
+    return false;
+}
 
-// small note on naming convetion in C#:
+// check what chars password contains methods:
+bool HasUppercase(string password)
+{
+    // skriv koden her :)
+    return false;
+}
+bool HasLowercase(string password)
+{
+    // skriv koden her :)
+    return false;
+}
+bool HasDigit(string password)
+{
+    // skriv koden her :)
+    return false;
+}
+bool HasSpecialCharacter(string password)
+{
+    // skriv koden her :)
+    return false;
+}
 
-// local variables are camelCase (name starts with an a-z value in lowercase), any any new word is split on an uppercase first character
-// Global or Public variables or Classes are PascalCase (name starts with an A-Z value in uppercase) , any any new word is split on an uppercase first character
-// Lastly, we usually prefer very verbose variablenames over short names that can confuse the reader.
+int CalculatePasswordScore(string password)
+{
+    return 0;
+}
+
+void GetMissingRequirements(string password)
+{
+    // code to check requirments, and then display to user.
+}
